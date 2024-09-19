@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="validation_js.js"></script>
+    <title>Feeback</title>
+    <style>
+      .success-icon{
+        visibility: hidden;
+      }
+      .failure-icon{
+        visibility: hidden;
+      }
+      .align{
+        align-items: start;
+
+        
+      }
+      
+      
+    </style>
+    
+  </head>
+
+  <body style="text-align: center;color:burlywood;font-size: 24px;" >
+    <div class="dec">
+        <a href='index.html'> About </a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="academic.html"> Academic </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href='hobbies.html'> Hobbies </a>&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://supertrickster.github.io/Resume_presentation/#'> Project </a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href='Timetable.html'> Time-Table </a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="Feedback_form.html">Feedback</a>
+    </div>
+    <h1 class="dec"><u>Feedback Form</u></h1>
+    <h1 class="dec">Please leave your feedback</h1>
+
+    <form action="insert.php" method="post" >
+      <div style="align-items: center;">
+      <div class="align">
+        <label for="txt_fname"> Username </label>
+        <i class="fas fa-user"> </i>
+        <input type="text" id="txt_fname" required placeholder="Harry" />
+        <i class="far fa-check-circle success-icon "></i>
+        <i class="fas fa-exclamation-circle failure-icon "></i>
+      </div>
+      <br />
+      <div class="align">
+        <label for="Checked"> Validate Username</label>
+        <i class="fas fa-user"> </i>
+        <input type="checkbox" id="Checked" onclick="ValidateFields()">
+      </div>
+      <!--<div>
+        <label for="txt_lname"> Last name </label>
+        <i class="fas fa-user"> </i>
+        <input type="text" id="txt_lname" placeholder="Maguire" />
+      </div>-->
+      <br />
+      <div class="align">
+        <label for="txt_password"> password</label>
+        <i class="fas fa-lock"></i>
+        <input type="password" id="txt_password" placeholder="******" />
+       
+      </div>
+      <br>
+      <div class="align">
+        <label for="Checked"> Show Password</label>
+        <i class="fas fa-lock"></i>
+
+        <input type="checkbox" id="Checked1" onclick="TogglePassword()">
+      </div>
+      <br />
+      <div class="align">
+        <label for="title"> Title </label>
+        <!-- like print-->
+
+        <label for="OptMr">Mr.</label>
+        <input type="radio" name="title" id="optmr" value="Mr" />
+
+        <label for="optMs"> Ms.</label>
+        <!-- like print-->
+        <input type="radio" name="title" id="optms" value="Ms" />
+        <label for="optPhd"> PhD.</label>
+        <!-- like print-->
+        <input type="radio" name="title" id="optPhd" value="Phd" />
+      </div>
+      <br />
+      <div class="align">
+        <label for="txt_email">Email</label>
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="txt_email" placeholder="abc@gmail.com" />
+      </div>
+      <br />
+      <div class="align">
+        <label for="txt_meet">Virtual Meet</label>
+        <i class="fas fa-calendar"></i>
+
+        <input type="date" id="txt_meet" />
+      </div>
+      <br />
+      <div class="align">
+        <label for="1st_time" muliple size="1"> Preferred time (IST) </label>
+        <i class="fas fa-clock"></i>
+
+        <select id="1st time">
+          <!--dropdown tag-->
+          <option value="morning">9:00 am</option>
+          <option value="noon">2:00 pm</option>
+          <option value="evening">7:00 pm</option>
+        </select>
+      </div>
+      <br />
+      <div class="align">
+        <label for="chk_sub"> Subscribe </label>
+        <input type="checkbox" id="chk_sub" value="subscribe" checked />
+      </div>
+      <br />
+      <div class="align">
+        <input style="background-color: black;color:white;" type="submit" value="Submit"/>
+        <input style="background-color: black;color:white;" type="reset" value="Clear"/>
+     </div>
+     </div>
+    </form>
+  </body>
+</html>
